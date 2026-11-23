@@ -1,0 +1,69 @@
+{
+  "protocol_id": "G4-v1-independent-legacy-200-150-FP16",
+  "source": "基线实验（200张训练集）/train_200.py plus designs/G4_complementarity_design_v1/TRAINER_PROTOCOL_DIFF_AUDIT.md",
+  "model": {
+    "backbone": "hrnetv2_w48",
+    "num_classes": [
+      7,
+      2
+    ],
+    "pretrained": false,
+    "input_size": [
+      520,
+      520
+    ]
+  },
+  "data": {
+    "train_manifest": "configs/data_splits/train_200.txt",
+    "train_manifest_sha256": "39ebef38a35e2e87e98f20d599ffcd78cf0a6e6f2369b33ae81d903c2f70dbec",
+    "train_count": 200,
+    "validation_manifest": "configs/data_splits/val.txt",
+    "validation_manifest_sha256": "a8720535af6db76a1e1d0e9aa5341516c1da550bc3570cbde5387ceb9c43f837",
+    "validation_count": 34,
+    "data_root": "/mnt/workspace/AECIF_Kaggle_bundle/VOCdevkit",
+    "augmentation": "Original SegmentationDataset train=True operations; no changes",
+    "validation_preprocessing": "Original deterministic 520x520 letterbox; no changes",
+    "independent_test_access": false
+  },
+  "initialization": {
+    "path": "/mnt/workspace/AECIF_G4_v1_independent/resources/initialization/best_checkpoint_86.76_PSA_s.pth",
+    "sha256": "45c202530d8e6831fc56fc210c0597c2d04cd51fdbda10a0ca70101a33dadcf3",
+    "size_bytes": 621699742,
+    "loading_rule": "Original train_200.py partial key/shape match after stripping module. prefix; 1830 tensors expected",
+    "training_from_scratch": false
+  },
+  "training": {
+    "epochs": 150,
+    "batch_size": 4,
+    "optimizer": "Adam",
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "weight_decay": 0.0,
+    "learning_rate_peak": 0.0003,
+    "learning_rate_minimum": 3e-06,
+    "scheduler": "Original cosine helper; total 150 epochs, 3-epoch capped warmup and 15-epoch minimum-LR tail",
+    "loss": "Original Element CE (7 classes) + Corrosion CE (2 classes), all-one class weights, original ignore indices",
+    "dwa": "Original two-task DWA: first two epochs equal; then temperature 2; weights sum to 2",
+    "precision": "FP16 autocast + torch.cuda.amp.GradScaler (legacy protocol candidate)",
+    "validation_precision": "FP32",
+    "seed": 20261112,
+    "seed_note": "New common seed for the G4-v1 comparison; historical 200/150 run seed is unknown",
+    "selection_rule": "Minimum weighted validation total CE; ties choose the later epoch"
+  },
+  "runtime_lock": {
+    "python": null,
+    "pytorch": null,
+    "cuda": null,
+    "gpu": null,
+    "status": "MUST_BE_LOCKED_BEFORE_ANY_GPU_PROBE_OR_TRAINING",
+    "reason": "The historical runtime was not recorded; current local/cloud runtime must be captured explicitly"
+  },
+  "execution_safety": {
+    "formal_trainer_connected": false,
+    "gpu_test_run_in_this_phase": false,
+    "training_run_in_this_phase": false,
+    "test_100_read": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "G0": {
+    "total_parameters": 77215305,
+    "adapter_parameters": 0
+  },
+  "G-E": {
+    "total_parameters": 77225178,
+    "adapter_parameters": 9873
+  },
+  "G-D": {
+    "total_parameters": 77236842,
+    "adapter_parameters": 21537
+  },
+  "G4": {
+    "total_parameters": 77246715,
+    "adapter_parameters": 31410
+  },
+  "G4-SS": {
+    "total_parameters": 77246715,
+    "adapter_parameters": 31410
+  },
+  "G4-Swap": {
+    "total_parameters": 77246715,
+    "adapter_parameters": 31410
+  },
+  "G4-NoCross": {
+    "total_parameters": 77246715,
+    "adapter_parameters": 31410
+  }
+}

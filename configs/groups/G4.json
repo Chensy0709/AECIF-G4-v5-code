@@ -1,0 +1,1 @@
+{"group":"G4","element_adapter":{"kind":"dtcwt","bottleneck":8,"levels":3,"orientations_per_level":6,"biort":"near_sym_a","qshift":"qshift_a","mode":"symmetric"},"corrosion_adapter":{"kind":"spatial","bottleneck":16},"no_cross":false,"protocol":"../protocol.json"}

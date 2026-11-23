@@ -1,0 +1,14 @@
+{
+  "trainer_id": "AECIF-G4-v1-unified-epoch-trainer",
+  "base_protocol": "protocol.json",
+  "group_config_directory": "groups",
+  "precision_mode": "fp16_grad_scaler",
+  "epoch_boundary_resume": true,
+  "seed": 20261112,
+  "train_sampler": "seeded per-epoch permutation over the locked train manifest",
+  "augmentation_rng": "per epoch/sample derived NumPy seed; original SegmentationDataset transforms unchanged",
+  "runtime_lock": null,
+  "runtime_lock_status": "MUST_BE_CREATED_AND_REVIEWED_BEFORE_ANY_GPU_PROBE_OR_TRAINING",
+  "formal_training_enabled_by_default": false,
+  "independent_test_access": false
+}

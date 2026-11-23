@@ -1,0 +1,6 @@
+# Use the DSW-provided torch/CUDA/driver; do not install or upgrade them here.
+numpy
+Pillow
+opencv-python-headless
+PyWavelets
+setuptools  # legacy coeff loader imports pkg_resources

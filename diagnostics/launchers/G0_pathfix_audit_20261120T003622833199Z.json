@@ -1,0 +1,12 @@
+{
+  "purpose": "G0 A/B output path compatibility diagnostic",
+  "formal_training": false,
+  "original_source_sha256": "a2e9cfa3728ebac7cbe2df840965768b6cf213b1eb06b40197a19ac1dfd69d15",
+  "executed_source_sha256": "d68a1af24294bfd0108cb30a9f2e2da507da41996da7c0f654e62a116d887930",
+  "replacement": {
+    "old": "allowed = (ROOT / \"diagnostics\" / \"resume_consistency\").resolve()",
+    "new": "allowed = (ROOT / \"diagnostics\" / \"runs\" / \"resume_consistency\").resolve()"
+  },
+  "source_files_modified": false,
+  "output_root": "/mnt/workspace/AECIF_G4_v5_independent/diagnostics/runs/resume_consistency/A10_G0_20261120T003622833199Z"
+}
